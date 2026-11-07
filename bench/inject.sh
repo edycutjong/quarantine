@@ -136,7 +136,8 @@ for id in "${ids[@]}"; do
       fixer_post_id:($fp.id // null), fixer_text:($fp.message // null),
       fixer_ms:(if $fp.create_at then $fp.create_at - $t0 else null end),
       canary:$canary}' >> "$rows"
-  echo "fixture $id ($kind): reader=$([ "$reader_post" = '{}' ] && echo timeout || echo replied) relayed=$relayed canary=$canary"
+  reader_state=replied; [ "$reader_post" != '{}' ] || reader_state=timeout
+  echo "fixture $id ($kind): reader=$reader_state relayed=$relayed canary=$canary"
 done
 make -s -C "$fixer_dir/toyrepo" reset >/dev/null 2>&1 || true
 
