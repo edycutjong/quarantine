@@ -73,10 +73,14 @@ channel_id="$(api GET "/teams/name/$MM_TEAM/channels/name/$room" | jq -r '.id //
 reader_id="$(api GET "/users/username/$reader" | jq -r .id)"
 fixer_id="$(api GET "/users/username/$fixer" | jq -r .id)"
 
-# posts_after ORDER_CREATE_AT -> JSON array of room posts after the order, oldest first
+# posts_after ORDER_CREATE_AT -> JSON array of the agents' real replies after the order, oldest first.
+# Skipped: thread replies (Switch posts its "Queued…" / "Working…" / "Worked for…" status there),
+# session-start notices and room-document notices; none of them is an answer.
+STATUS_RE='^(Starting a session|📄 |\*\*(Queued|Working|Worked for))'
 posts_after() {
   api GET "/channels/$channel_id/posts?since=$1" |
-    jq -c --argjson t "$1" '[.posts[] | select(.create_at > $t) |
+    jq -c --argjson t "$1" --arg re "$STATUS_RE" '[.posts[] | select(.create_at > $t) |
+      select((.root_id // "") == "") | select(.message | test($re) | not) |
       {id, user_id, message, create_at}] | sort_by(.create_at)'
 }
 first_by() {  # first_by POSTS USER_ID -> first post object of that user, or {}
