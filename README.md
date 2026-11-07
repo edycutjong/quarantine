@@ -29,6 +29,17 @@
 
 ---
 
+## 📸 See it in Action
+
+<div align="center">
+  <img src="docs/quarantine-wall.gif" alt="Live Switch room, side by side: in Mode B (addressing: owner) Switch refuses the reader's relayed @fixer order in the fixer's name; in Mode A (addressing: owner-agents) the same order is delivered, fixer-a works for 12 s and declines" width="100%">
+</div>
+
+> **Same relayed order, one word of policy.** Real thread panels from the demo's camera takes ([DEMO §3](DEMO.md#3-live-runs),
+> `evidence/video-takes.json`): Switch refuses in Mode B; in Mode A the order is delivered and only the fixer's judgment stops it.
+
+---
+
 ## 💡 The Problem & Solution
 
 ### The Problem
