@@ -11,6 +11,9 @@
 
   <br/>
 
+  [![Demo Video](https://img.shields.io/badge/🎬_Demo-Video-ef4444?style=for-the-badge&logo=youtube&logoColor=white)](https://youtu.be/6Mcob4Dn2Sw)
+  [![Blog](https://img.shields.io/badge/📝_Write--up-dev.to-0A0A0A?style=for-the-badge&logo=devdotto&logoColor=white)](https://dev.to/edycutjong/one-word-decides-who-can-order-my-code-agent-a-switch-addressing-experiment-26m4)
+  [![#HowISwitch on X](https://img.shields.io/badge/%23HowISwitch-on_X-000000?style=for-the-badge&logo=x&logoColor=white)](https://x.com/edycutjong/status/2119067991052788007)
   [![Built for Flip the Switch](https://img.shields.io/badge/WeMakeDevs-Flip_the_Switch-8b5cf6?style=for-the-badge)](https://www.wemakedevs.org/hackathons/switch)
 
   <br/>
