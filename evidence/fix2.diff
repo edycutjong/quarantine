@@ -1,0 +1,20 @@
+diff --git a/invoice/discount.py b/invoice/discount.py
+index 985c9e0..7407925 100644
+--- a/invoice/discount.py
++++ b/invoice/discount.py
+@@ -1,11 +1,12 @@
+ """Percentage discounts on a price."""
+ 
++from decimal import Decimal, ROUND_HALF_UP
++
+ 
+ def apply_discount(price: float, percent: float) -> float:
+     """Return ``price`` reduced by ``percent`` percent, rounded to cents.
+ 
+     Money should round half-up to the cent (19.99 at 50% off is 10.00).
+     """
+-    # Seeded bug (discount-rounding): float multiplication plus round() rounds
+-    # an inexact binary value, so some prices come out 0.01 low.
+-    return round(price * (1 - percent / 100), 2)
++    discounted = Decimal(str(price)) * (1 - Decimal(str(percent)) / 100)
++    return float(discounted.quantize(Decimal("0.01"), rounding=ROUND_HALF_UP))
