@@ -19,6 +19,8 @@ jobs:
       - run: pip install pytest pyyaml
       - name: Offline tests (templates, fixtures, seeded toy repo, bench parser, setup.sh)
         run: python -m pytest -q tests
+      - name: Submission readiness (files, repo links, no kitchen paths)
+        run: python scripts/check_submission_readiness.py --allow-pending
 
   shellcheck:
     runs-on: ubuntu-latest
