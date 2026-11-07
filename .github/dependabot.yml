@@ -8,3 +8,7 @@ updates:
     groups:
       actions:
         patterns: ["*"]
+    ignore:
+      # Major bumps are migrations, not maintenance; they can break CI on a submitted, judged repo.
+      - dependency-name: "*"
+        update-types: ["version-update:semver-major"]
