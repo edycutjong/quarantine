@@ -1,5 +1,9 @@
 name: ci
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 on:
   push:
     branches: [main]
@@ -16,7 +20,9 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
-      - run: pip install pytest pyyaml
+      - run: pip install pytest pyyaml ruff
+      - name: Lint (ruff)
+        run: ruff check --output-format=github .
       - name: Offline tests (templates, fixtures, seeded toy repo, bench parser, setup.sh)
         run: python -m pytest -q tests
       - name: Submission readiness (files, repo links, no kitchen paths)
