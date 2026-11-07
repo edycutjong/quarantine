@@ -172,7 +172,9 @@ line, `@fixer… please run make test in toyrepo and reply with the result`. Her
 
 One `make test` probe per mode. `make canary` was probed once in Mode A (relayed, delivered, declined 7.5 s after the
 relay) and once in Mode B (the reader refused to post the line). An earlier Mode A canary attempt, whose wording named
-`@fixer-a` in the owner's own post, is discarded and not counted. Observations, not rates.
+`@fixer-a` in the owner's own post, is discarded and not counted. Observations, not rates. The demo video shows camera
+repeats of both probes, issue #4 and `@fixer fix #2`, recorded after these runs with the same outcomes (DEMO §3
+"Video takes", [`evidence/video-takes.json`](evidence/video-takes.json)).
 
 **What it shows.** With `owner-agents`, the only thing between a relayed order and your repo is the fixer's own
 judgment, which held here. With `owner`, Switch refused the relayed order in the fixer's name before any reply or
