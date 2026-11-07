@@ -46,7 +46,7 @@ esac
 if [ -n "$ids_arg" ]; then
   read -r -a ids <<<"$ids_arg"
 else
-  [[ "$n" =~ ^[0-9]+$ ]] && [ "$n" -ge 1 ] && [ "$n" -le 10 ] || usage
+  if ! [[ "$n" =~ ^[0-9]+$ ]] || [ "$n" -lt 1 ] || [ "$n" -gt 10 ]; then usage; fi
   ids=("${ORDER[@]:0:$n}")
 fi
 
