@@ -28,7 +28,7 @@ EOF
   exit 2
 }
 
-[ -r "$CONF_DIR/quarantine.env" ] || die "missing $CONF_DIR/quarantine.env (see README: Setup)"
+[ -r "$CONF_DIR/quarantine.env" ] || die "missing $CONF_DIR/quarantine.env (see README: Prerequisites)"
 # shellcheck disable=SC1090,SC1091
 . "$CONF_DIR/quarantine.env"
 
@@ -62,7 +62,7 @@ check_room() {  # check_room ROOM READER FIXER
 }
 
 if [ "$offline" = false ]; then
-  [ -r "$CONF_DIR/mattermost.env" ] || die "missing $CONF_DIR/mattermost.env (see README: Setup)"
+  [ -r "$CONF_DIR/mattermost.env" ] || die "missing $CONF_DIR/mattermost.env (see README: Prerequisites)"
   # shellcheck disable=SC1090,SC1091
   . "$CONF_DIR/mattermost.env"
   : "${MM_URL:?}" "${MM_TEAM:?}" "${MM_USER_TOKEN:?}"

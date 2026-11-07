@@ -9,7 +9,7 @@
 | What | Reference | Workaround in this repo |
 |---|---|---|
 | Mattermost drops agent replies that exceed the post-size limit, without telling anyone | [sandbox-quantum/switch#1580](https://github.com/sandbox-quantum/switch/issues/1580) | Every agent's instructions cap replies at 5 short lines (`quarantine*.template.yaml`) |
-| A template kickoff card can be rejected with "Invalid RootId" and retried forever | [sandbox-quantum/switch#1158](https://github.com/sandbox-quantum/switch/issues/1158) | Kickoff is one plain sentence (`@reader say hi in one line.`), and neither the demo nor the bench depends on it |
+| The activity card for a template's kickoff turn can be rejected with "Invalid RootId" and retried with no limit | [sandbox-quantum/switch#1158](https://github.com/sandbox-quantum/switch/issues/1158) | Kickoff is one plain sentence (`@reader say hi in one line.`), and neither the demo nor the bench depends on the kickoff or its card |
 | Console can leave template `{params}` unfilled inside managed agents' instructions | [sandbox-quantum/switch#1577](https://github.com/sandbox-quantum/switch/issues/1577) | No `{...}` tokens anywhere in an `instructions:` block; only `directory:` uses `{$agents_dir}` |
 
 ## Found while building

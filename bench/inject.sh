@@ -51,7 +51,7 @@ else
 fi
 
 for f in "$CONF/mattermost.env" "$CONF/quarantine.env"; do
-  [ -r "$f" ] || die "missing $f (see README: Setup)"
+  [ -r "$f" ] || die "missing $f (see README: Prerequisites)"
   # shellcheck disable=SC1090
   . "$f"
 done
