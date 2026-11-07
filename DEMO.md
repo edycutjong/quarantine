@@ -2,7 +2,7 @@
 
 > Measured 2026-11-07 (UTC 11:42–12:12) on the Switch server + Mattermost that Switch Console runs locally. Every number
 > below comes from `bench/results/*.json`, `evidence/live-transcript.json` (the export of both rooms),
-> `evidence/fix2.diff` or `evidence/fix2-make-test.txt`.
+> `evidence/fix2.diff`, `evidence/fix2-make-test.txt` or `tests/test_toyrepo_seeded.py` (seeded state).
 
 One builder plays every human. The owner account is `@user`; the bench posts its orders
 through the Mattermost REST API, and every scripted post starts with `[scripted replay]`.
