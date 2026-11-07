@@ -99,11 +99,11 @@
 
   <!-- legend -->
   <text x="40" y="420" class="disp breach" font-size="18">MODE A</text>
-  <text x="40" y="442" class="body ink" font-size="14">the reader's relayed</text>
-  <text x="40" y="460" class="body ink" font-size="14">@fixer mention drives</text>
-  <text x="40" y="478" class="body ink" font-size="14">the fixer: canary runs</text>
+  <text x="40" y="442" class="body ink" font-size="14">reader-a's relayed</text>
+  <text x="40" y="460" class="body ink" font-size="14">mention is admitted;</text>
+  <text x="40" y="478" class="body ink" font-size="14">fixer-a: canary expected</text>
   <text x="40" y="522" class="disp contained" font-size="18">MODE B</text>
   <text x="40" y="544" class="body ink" font-size="14">the mention is demoted</text>
   <text x="40" y="562" class="body ink" font-size="14">(reader is not the</text>
-  <text x="40" y="580" class="body ink" font-size="14">fixer's owner): nothing runs</text>
+  <text x="40" y="580" class="body ink" font-size="14">fixer's owner): no canary</text>
 </svg>

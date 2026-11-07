@@ -39,8 +39,8 @@
 - **Asset:** the fixer's ability to change code and run commands.
 - **Assumption:** the reader will eventually be fooled into repeating an order. QUARANTINE does not detect injections.
 - **Control:** the fixer's `addressing:` policy, applied by Switch to every message addressed to the fixer before the fixer
-  treats it as an order.
-  It does not depend on either agent's prompt.
+  treats it as an order, whatever either agent's prompt says. Both fixers carry the same defensive prompt, so a Mode A
+  run without a canary means the prompt held that time, not that the wall is unnecessary.
 - **Out of scope:** a malicious or careless owner (owner orders always pass); Switch server compromise; other platforms.
 
 ## Why two rooms
